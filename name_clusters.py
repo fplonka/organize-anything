@@ -20,6 +20,7 @@ import asyncio
 from openai import AsyncOpenAI
 import openai
 
+doing_wikipedia = True
 
 max_items_to_show = 100
 def entry_to_string(entry: Union[Dict, list], indent: int = 0) -> str:
@@ -32,11 +33,17 @@ def entry_to_string(entry: Union[Dict, list], indent: int = 0) -> str:
             sample_size = min(max_items_to_show, len(flattened_items))
             sampled_items = random.sample(flattened_items, sample_size)
             for item in sampled_items:
+                if doing_wikipedia:
+                    (title, id_) = item
+                    item = title
                 result += "  " * (indent + 1) + item + "\n"
     else:
         if len(entry) > max_items_to_show:
             entry = random.sample(entry, max_items_to_show)
         for item in entry:
+            if doing_wikipedia:
+                (title, id_) = item
+                item = title
             result += "  " * indent + item + "\n"
     
     return result
