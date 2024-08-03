@@ -12,4 +12,6 @@ Since agglomerative clustering is slow, organize-anything cheats slightly and re
 
 ## Usage
 
-TODO
+TODO: clean up code (separate out wikipedia specific bs) and expose some kind of sane api, script flags/params, reqs.txt, download/running example
+
+imagining something like `python main.py file.txt --generate-html -o out.html`
