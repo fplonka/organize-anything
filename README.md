@@ -2,7 +2,7 @@
 
 organize-anything is a Python script which uses machine learning to organize a list of text items into named categories and subcategories. You can pretty-print the output, generate HTML from it, or just work with the tree structure in code.
 
-See the [demo page]() showing a million Wikipedia articles categorized with organize-anything for an example. 
+See the [demo page](https://fplonka.dev/organize-anything) showing a million Wikipedia articles categorized with organize-anything for an example. 
 
 ## How it works
 
