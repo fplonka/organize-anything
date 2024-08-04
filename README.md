@@ -14,9 +14,16 @@ I experimented with some other methods (HDBSCAN, OPTICS, recursively running k-m
 
 ## Usage
 
-Copy the script and install the dependencies in requirements.txt. The input format is a file with one text item per line. 
+```bash
+git clone https://github.com/fplonka/organize-anything.git
+cd organize-anything
+pip install -r requirements.txt
+python script.py /path/to/input.txt
+```
 
-Make sure you either provide an OpenAI API key with `--api-key API_KEY` or set the `OPENAI_API_KEY` env var. As a reference, running organize-anything for 1 million wikipedia article titles cost ~$2 for the gpt4o-mini calls and ~$0.10 for the vector embedding calls. 
+The input format is a file with one text item per line. Make sure you either provide an OpenAI API key with `--api-key API_KEY` or set the `OPENAI_API_KEY` env var. As a reference, running organize-anything for 1 million wikipedia article titles cost ~$2 for the gpt4o-mini calls and ~$0.10 for the vector embedding calls. 
+
+### Usage details
 
 ```
 usage: script.py [-h] [--api-key API_KEY] [--generate-html] [--dont-name] [--verbose]
