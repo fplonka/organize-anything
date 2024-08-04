@@ -166,4 +166,6 @@ output*
 titles*
 *.parquet
 data/
+**/.DS_Store
 .DS_Store
+wikipedia_demo/fragments/*
